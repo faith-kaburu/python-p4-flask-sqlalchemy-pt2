@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from random import choice as rc
-
 from faker import Faker
 
 from app import app
@@ -17,7 +16,7 @@ with app.app_context():
     owners = []
     for n in range(50):
         owner = Owner(name=fake.name())
-        
+
         owners.append(owner)
 
     db.session.add_all(owners)
